@@ -78,12 +78,11 @@ There are two main steps in the modeling process:
 * Hyperparameter tuning:  distance weights 
 ### Application and visualizations
   * Streamlit application:  src/app.py
-    * Example Bar plot:  comparison of estimated quarterly volume based on winter weather vs. actual sales volume
+    * Example Bar plot:  comparison of estimated quarterly volume based on winter weather vs. actual sales volume <br />
     <img src=volumes.png style="width: 40%; height: auto;">
-    * Example Salt color map: estimated salt volumes per geography for selected quarter and prior year quarter
+    * Example Salt color map: estimated salt volumes per geography for selected quarter and prior year quarter <br />
     <img src=salt.png style="width: 40%; height: auto;">
-    * Example solid precipitation color map: solid precipitation per geography for selected quarter and prior 
-    year quarter
+    * Example solid precipitation color map: solid precipitation per geography for selected quarter and prior year quarter <br />
      <img src=solid_precip.png style="width: 40%; height: auto;">
 ## Getting Started <br />
 ### For development: 
