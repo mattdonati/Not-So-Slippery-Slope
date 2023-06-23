@@ -55,7 +55,7 @@ There are two main steps in the modeling process:
 
 ### ML Model 1:  Predict quarterly market salt usage by geography
 * Overview: 
-  * Label: Total salt usage (lbs.) per salting event, per geospatial polygon (10 km x 10 km) 
+  * Label: total salt usage (lbs.) per salting event, per geospatial polygon (10 km x 10 km) 
   * Features: 
     * SNODAS variables the day of and day prior to salting event per geospatial polygon. 
     * Extent and type of road lane kms per geospatial polygon
@@ -63,8 +63,8 @@ There are two main steps in the modeling process:
 * Data wrangling and munging: 
   * Geospatial overlays: geospatially align SNODAS, salt and road variables.
 * Feature extraction/engineering:  
-  * Optimize size of geospatial grids; aggregations of SNODAS variables (max, min, mean), time extent of SNODAS 
-  * variables, aggregations of subset of SNODAS and road variables based on correlation matrices.    
+  * Optimize size of geospatial grids, aggregations of SNODAS variables (max, min, mean), time extent of SNODAS 
+  variables, road extent aggregation, and subset of SNODAS and road variables based on correlation matrices    
 * Cross-validation and hyperparameter tuning 
 ### ML Model 2: Predict quarterly company salt volumes 
 * Overview: 
@@ -72,25 +72,27 @@ There are two main steps in the modeling process:
   * Features: 
     * Market salt usage estimates per geospatial polygon (predictions using fitted Model 1)
     * Depot distances: distance from closest salt depot, per geospatial polygon
-* Estimators: economic gravity model weighting sales by distance; Linear Regression
+* Estimators: economic gravity model weighting sales by distance from depot; linear regression
 * Data wrangling and munging: 
   * Geospatial overlays: geospatially align SNODAS, salt estimates, and road variables.
 * Hyperparameter tuning:  distance weights 
 ### Application and visualizations
   * Streamlit application:  src/app.py
-    * Bar plot:  comparison of year over year quarterly volume based on winter weather vs. actual 
-    sales volumes
-    * Salt color maps: estimated salt volumes per geography for selected quarter and prior year quarter
-    * Solid precipitation color maps: solid precipitation per geography for selected quarter and prior 
-    year quarter  
-
+    * Example Bar plot:  comparison of estimated quarterly volume based on winter weather vs. actual sales volume
+    <img src=volumes.png style="width: 40%; height: auto;">
+    * Example Salt color map: estimated salt volumes per geography for selected quarter and prior year quarter
+    <img src=salt.png style="width: 40%; height: auto;">
+    * Example solid precipitation color map: solid precipitation per geography for selected quarter and prior 
+    year quarter
+     <img src=solid_precip.png style="width: 40%; height: auto;">
 ## Getting Started <br />
 ### For development: 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 2. Raw data (not constructed with Makefile) kept here: ```data/raw/```
-3. Install dependencies <br />
+3. Create and activate ```venv```
+4. Install dependencies <br />
 ```pip install -r requirements.txt```<br />
-4. Makefile: 
+5. Makefile: 
    running ```make``` from root directory will output list of make targets in order <br />
 
 ### For application end use: <br />
@@ -98,7 +100,8 @@ There are two main steps in the modeling process:
 2. Processed data needed for application kept here:  
 ```data/processed/```
 ```models/```
-3. Install dependencies <br />
+4. Create and activate ```venv```
+5. Install dependencies <br />
 ```pip install -r requirements.txt```<br />
-4. Runn application from command line<br />
-```streamlit run app.py```
+6. Runn application from command line<br />
+```streamlit run src/app.py```
