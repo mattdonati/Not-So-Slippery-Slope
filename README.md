@@ -1,5 +1,5 @@
 # Not So Slippery Slope
-Compass Minerals (NYSE:  CMP) represents a potential long-term equity investment, but the large fluctuations in sales, the result of changes in winter weather, increase investment risk by masking potential changes to the underlying business. This project reduces that investment risk, by estimating changes in sales net of the influence of winter weather fluctuations. 
+Compass Minerals (NYSE:  CMP) products rock salt for roadway de-icing. CMP represents a potential long-term equity investment, but the large fluctuations in sales, the result of changes in winter weather, increase investment risk by masking potential changes to the underlying business. This project reduces that investment risk, by estimating changes in sales net of the influence of winter weather fluctuations. 
 
 ### Problem Statement
 
@@ -51,7 +51,7 @@ There are two main steps in the modeling process:
   * Iowa DOT  Winter Storm Analysis Historic View 
   Salt usage: https://public-iowadot.opendata.arcgis.com/datasets/IowaDOT::winter-storm-analysis-historic-view/about
 * Geocoded CMP Salt Depot Locations (estimated from published reports) 
-* CMP quartlery road de-icing salt volumes (collected from company financial reports)      
+* CMP quarterly road de-icing salt volumes (collected from company financial reports)      
 
 ### ML Model 1:  Predict quarterly market salt usage by geography
 * Overview: 
@@ -66,7 +66,7 @@ There are two main steps in the modeling process:
   * Optimize size of geospatial grids; aggregations of SNODAS variables (max, min, mean), time extent of SNODAS 
   * variables, aggregations of subset of SNODAS and road variables based on correlation matrices.    
 * Cross-validation and hyperparameter tuning 
-### ML Model 2: Predict quartlery company salt volumes 
+### ML Model 2: Predict quarterly company salt volumes 
 * Overview: 
   * Label: quarterly salt sales 
   * Features: 
@@ -76,8 +76,8 @@ There are two main steps in the modeling process:
 * Data wrangling and munging: 
   * Geospatial overlays: geospatially align SNODAS, salt estimates, and road variables.
 * Hyperparameter tuning:  distance weights 
-### Application and visulatizations
-  * Streamlit application:  app.py
+### Application and visualizations
+  * Streamlit application:  src/app.py
     * Bar plot:  comparison of year over year quarterly volume based on winter weather vs. actual 
     sales volumes
     * Salt color maps: estimated salt volumes per geography for selected quarter and prior year quarter
@@ -85,7 +85,7 @@ There are two main steps in the modeling process:
     year quarter  
 
 ## Getting Started <br />
-### For devleopment: 
+### For development: 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
 2. Raw data (not constructed with Makefile) kept here: ```data/raw/```
 3. Install dependencies <br />
