@@ -1,5 +1,5 @@
 # Not So Slippery Slope
-Compass Minerals (NYSE:  CMP) products rock salt for roadway de-icing. CMP represents a potential long-term equity investment, but the large fluctuations in sales, the result of changes in winter weather, increase investment risk by masking potential changes to the underlying business. This project reduces that investment risk, by estimating changes in sales net of the influence of winter weather fluctuations. 
+Compass Minerals (NYSE:  CMP) produces rock salt for roadway de-icing. CMP represents a potential long-term equity investment, but the large fluctuations in sales, the result of changes in winter weather, increase investment risk by masking potential changes to the underlying business. This project reduces that investment risk, by estimating changes in sales net of the influence of winter weather fluctuations. 
 
 ### Problem Statement
 
@@ -25,7 +25,7 @@ managers to take larger positions, all else being equal.
 * Geospatial Analysis
 * Data Visualization
 * Predictive Modeling
-* Regression Analysis
+* Regression Analysis: Histogram Gradient Boosting Regressor with poisson loss function
 
 ### Technologies
 * Python
