@@ -79,11 +79,11 @@ There are two main steps in the modeling process:
 ### Application and visualizations
   * Streamlit application:  src/app.py
     * Example Bar plot:  comparison of estimated quarterly volume based on winter weather vs. actual sales volume <br />
-    <img src=volumes.png style="width: 40%; height: auto;"><br />
+    <img src=volumes.png style="width: 30%; height: auto;"><br />
     * Example Salt color map: estimated salt volumes per geography for selected quarter and prior year quarter <br />
-    <img src=salt.png style="width: 40%; height: auto;"><br />
+    <img src=salt.png style="width: 50%; height: auto;"><br />
     * Example solid precipitation color map: solid precipitation per geography for selected quarter and prior year quarter <br />
-     <img src=solid_precip.png style="width: 40%; height: auto;"><br />
+     <img src=solid_precip.png style="width: 50%; height: auto;"><br />
 ## Getting Started <br />
 ### For development: 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
